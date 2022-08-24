@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "utilities/variables";
+
+/*estilos index*/
+
+/*body*/
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: rgb(204, 209, 209);
+}
+/*header*/
+header{
+    margin: 10px;
+    padding: 20px;
+    background-color: #002B5B;
+    text-align: center;
+}
+
+
+/*footer*/
+footer{
+    margin:0 10px 0 10px;
+    padding-left: 25px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: #002B5B; 
+    font-size: 15px;
+    h3{
+        color: $color-font-2;
+    }
+    div{
+        margin: 20px 0px;
+        h2{
+            color: $color-font-2;
+        }
+        img{
+            margin-bottom: 0;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    ul{
+        list-style-type: none;
+        li{
+            color: $color-font-2;
+        }
+        h2{
+            color: $color-font-2;
+        }
+    }
+}
+
+/*contenedor*/
+.contenedor{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "productos-1 productos-1"
+    "productos-2 productos-2"
+    "cajas cajas"
+    ;
+    main{
+        h3{
+            margin: 100px auto;
+            color: $color-font;
+        }
+    }
+    /*productos*/
+    .productos-1{
+        margin: 100px 0;
+        display: grid;
+        grid-area: productos-1;
+        padding: 10px;
+        background-color: $color-athari;
+        div{
+            margin: 1rem;
+            display: flex;
+            flex-flow: column wrap;
+            box-shadow: 2px 4px 6px;
+            background-color: $color-cards;
+            span{
+                margin: auto;
+                color: $color-font;
+            }
+            button{
+                width: 100px;
+                margin: auto;
+                margin-bottom: 10px;
+                background-color: $color-botones;
+            }
+            img{
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                position: relative; 
+            }
+        }
+    }
+    .productos-2{
+        margin: 100px 0;
+        display: grid;
+        grid-area: productos-2;
+        padding: 10px;
+        background-color: $color-athari;
+        div{
+            margin: 1rem;
+            display: flex;
+            flex-flow: column wrap;
+            box-shadow: 2px 4px 6px;
+            background-color: $color-cards;
+            span{
+                margin: auto;
+                color: $color-font;
+            }
+            button{
+                width: 100px;
+                margin: auto;
+                margin-bottom: 10px;
+                background-color: $color-botones;
+            }
+            img{
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                position: relative; 
+            }
+        }
+    }
+    /*banner*/
+    aside{
+        display: none;
+    } 
+    /*cajas*/
+    .cajas{
+        margin-top: 50px;
+        margin-bottom: 200px;
+        height: 600px;
+        width: 250px;
+        display: grid;
+        grid-area: cajas;
+        grid-template-columns: 1fr;
+        background-color: rgba(255, 255, 255, 0.308);
+        border: 1px solid black;
+        div{
+            margin: 15px;
+            padding-top: 15px;
+            border: 1px solid black;
+            align-content: center;
+            justify-content: center;
+            h4{
+                color: $color-font;
+            }
+            img{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+
+/*estilos media queries*/
+@media screen and (min-width:400px) {
+    footer{
+        ul, div{
+            font-size: 20px;
+        }
+    }
+    
+    .contenedor{
+        grid-template-areas: 
+        "productos-1 productos-1"
+        "banner banner"
+        "productos-2 productos-2"
+        "cajas cajas"
+        ;
+        .productos-1{
+            grid-template-columns: 1fr 1fr;
+        }
+        .productos-2{
+            grid-template-columns: 1fr 1fr;
+        }
+            /*aside*/
+        aside{
+            display: grid;
+            grid-area: banner;
+            width: 100%;
+            img{
+                height: 200px;
+                width: 500px;
+            }
+        }
+        .cajas{
+            height: 700px;
+            width: auto;
+        }
+     }
+}
+
+@media screen and (min-width:750px) {
+    /*header*/
+    header{
+        nav{
+            div{
+                div{
+                    div{
+                        ul{
+                            li:hover{
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*footer*/
+    footer{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    /*estilos index*/
+    .contenedor{
+        .productos-1{
+            grid-template-columns: 1fr 1fr 1fr;
+            div{
+                img{
+                    transition: 2s;
+                }
+                img:hover{
+                    transform: scale(1.2);
+                }
+                button:hover{
+                    transform: scale(0.9);
+                }
+            }
+        }
+        .productos-2{
+            grid-template-columns: 1fr 1fr 1fr;
+            div{
+                img{
+                    transition: 2s;
+                }
+                img:hover{
+                    transform: scale(1.2);
+                }
+                button:hover{
+                    transform: scale(0.9);
+                }
+        }
+        /*cajas*/
+        .cajas{
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 350px;
+            width: 600px;
+            div{
+                img{
+                    transition: 2s;
+                }
+                img:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+        aside{
+            img{
+                height: 200px;
+                width: 700px;
+            }
+        }
+    }
+ }
+}
