@@ -59,13 +59,6 @@ footer{
 
 /*contenedor*/
 .contenedor{
-    display: grid;
-    justify-content: center;
-    grid-template-areas: 
-    "productos-1 productos-1"
-    "productos-2 productos-2"
-    "cajas cajas"
-    ;
     main{
         h3{
             margin: 100px auto;
@@ -75,8 +68,6 @@ footer{
     /*productos*/
     .productos-1{
         margin: 100px 0;
-        display: grid;
-        grid-area: productos-1;
         padding: 10px;
         background-color: $color-athari;
         div{
@@ -106,8 +97,6 @@ footer{
     }
     .productos-2{
         margin: 100px 0;
-        display: grid;
-        grid-area: productos-2;
         padding: 10px;
         background-color: $color-athari;
         div{
@@ -145,8 +134,6 @@ footer{
         margin-bottom: 200px;
         height: 600px;
         width: 250px;
-        display: grid;
-        grid-area: cajas;
         grid-template-columns: 1fr;
         background-color: rgba(255, 255, 255, 0.308);
         border: 1px solid black;
@@ -178,6 +165,7 @@ footer{
     }
     
     .contenedor{
+        display: grid;
         grid-template-areas: 
         "productos-1 productos-1"
         "banner banner"
@@ -185,9 +173,13 @@ footer{
         "cajas cajas"
         ;
         .productos-1{
+            display: grid;
+            grid-area: productos-1;
             grid-template-columns: 1fr 1fr;
         }
         .productos-2{
+            display: grid;
+            grid-area: productos-2;
             grid-template-columns: 1fr 1fr;
         }
             /*aside*/
@@ -201,6 +193,8 @@ footer{
             }
         }
         .cajas{
+            display: grid;
+            grid-area: cajas;
             height: 700px;
             width: auto;
         }
