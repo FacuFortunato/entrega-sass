@@ -19,9 +19,9 @@ h2, h3, h4, h5, li, p{
 
 /*footer*/
 footer{
-  margin:0 10px 0 10px;
+  margin-top: 10px;
   padding-left: 25px;
-  width: auto;
+  width: 100%;
   height: auto;
   text-align: center;
   background-color: #002B5B; 
@@ -39,23 +39,23 @@ footer div img{
   width: 20px;
 }
 
+
 /*info productos*/
 .info-productos{
+  width: 100%;
   background-color: white;
-  border: 5px solid #002B5B;
   justify-content: center;
   text-align: center;
   margin: 200px 0;
   display: flex;
   flex-flow: column wrap;
+  border-bottom: 2px solid black;
 }
-
+.info-productos div h5{
+  font-weight: bold;
+}
 .info-productos div img{
-  height: 50%;
-  width: 50%;
-}
-.info-productos div ul{
-  list-style-type: none;
+  width: 250px;
 }
 .info-productos div ul li{
   list-style-type: none;
@@ -70,14 +70,22 @@ footer div img{
   justify-content: center;
   align-content: center;
 }
-
+.info-ventas{
+  border-bottom: 2px solid black;
+}
+.info-ventas p{
+  padding: 10px;
+  background-color: #002B5B;
+  color: white;
+  margin-bottom: 0;
+}
 .productos-1{
   margin: 100px auto;
   padding: 10px;
 }
 .productos-1 div{
   width: 70%;
-  height: 200px;
+  height: 350px;
   margin: 1rem auto;
   display: flex;
   flex-flow: column wrap;
@@ -87,7 +95,6 @@ footer div img{
   margin: auto;
 }
 .productos-1 div button{
-  height: 50px;
   width: 100px;
   margin: auto;
   margin-bottom: 10px;
@@ -106,7 +113,7 @@ footer div img{
 }
 .productos-2 div{
   width: 70%;
-  height: 200px;
+  height: 350px;
   margin: 1rem auto;
   display: flex;
   flex-flow: column wrap;
@@ -127,16 +134,39 @@ footer div img{
   margin: auto;
   position: relative;   
 }
+.productos-3{
+  margin: 100px auto;
+  padding: 10px;
+}
+.productos-3 div{
+  width: 70%;
+  height: 350px;
+  margin: 1rem auto;
+  display: flex;
+  flex-flow: column wrap;
+  box-shadow: 2px 4px 6px;
+}
+.productos-3 div span{
+  margin: auto;
+}
+.productos-3 div button{
 
-/*banner*/
-aside{
-  display: none;
-} 
+  width: 100px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.productos-3 div img{
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;   
+}
+
 
 /*cajas*/
 .cajas{
-  margin-top: 50px;
-  margin-bottom: 200px;
+  margin: 50px auto 200px auto;
   height: 600px;
   width: auto;
   grid-template-columns: 1fr;
@@ -172,35 +202,51 @@ aside{
     display: grid;
     grid-template-areas: 
     "productos-1 productos-1"
-    "banner banner"
     "productos-2 productos-2"
-    "productos-2 productos-2"
+    "productos-3 productos-3"
     "cajas cajas"
     ;
    }
 
-
+   .info-productos div ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .productos-1{
     display: grid;
     grid-area: productos-1;
     grid-template-columns: 1fr 1fr;
   }
+  .productos-1 div{
+    height: 350px;
+  }
+  .productos-1 div img{
+    height: 45%;
+  }
   .productos-2{
       display: grid;
-      grid-area: productos-1;
+      grid-area: productos-2;
       grid-template-columns: 1fr 1fr;
   }
-
-  /*aside*/
-  aside{
-      display: grid;
-      grid-area: banner;
-      width: 100%;
+  .productos-2 div{
+    height: 350px;
   }
-  aside img{
-      height: 200px;
-      width: 500px;
-  } 
+  .productos-2 div img{
+    height: 45%;
+  }
+  .productos-3{
+    display: grid;
+    grid-area: productos-3;
+    grid-template-columns: 1fr 1fr;
+  }
+  .productos-3 div{
+    height: 350px;
+  }
+  .productos-3 div img{
+    height: 45%;
+  }
+
   footer ul, div{
       font-size: 20px;
   }
@@ -221,12 +267,15 @@ aside{
   .productos-2{
       grid-template-columns: 1fr 1fr 1fr;
   }
+  .productos-3{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   /*cajas*/
   .cajas{
-      grid-template-columns: 1fr 1fr 1fr;
-      height: 350px;
-      width: 600px;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 350px;
+    width: 600px;
   }
   /*aside*/
   aside img{
@@ -265,6 +314,18 @@ aside{
   }
   .cajas div img:hover{
       transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .productos-1 div img{
+    width: 45%;
+  }
+  .productos-2 div img{
+    width: 45%;
+  }
+  .productos-3 div img{
+    width: 45%;
   }
 }
 
