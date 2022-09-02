@@ -46,7 +46,7 @@ footer div img{
   background-color: white;
   justify-content: center;
   text-align: center;
-  margin: 200px 0;
+  margin: 50px 0 200px 0;
   display: flex;
   flex-flow: column wrap;
   border-bottom: 2px solid black;
@@ -93,6 +93,7 @@ footer div img{
 }
 .productos-1 div span{
   margin: auto;
+  font-weight: bold;
 }
 .productos-1 div button{
   width: 100px;
@@ -121,6 +122,7 @@ footer div img{
 }
 .productos-2 div span{
   margin: auto;
+  font-weight: bold;
 }
 .productos-2 div button{
   width: 100px;
@@ -148,6 +150,7 @@ footer div img{
 }
 .productos-3 div span{
   margin: auto;
+  font-weight: bold;
 }
 .productos-3 div button{
 
@@ -167,7 +170,7 @@ footer div img{
 /*cajas*/
 .cajas{
   margin: 50px auto 200px auto;
-  height: 600px;
+  height: 700px;
   width: auto;
   grid-template-columns: 1fr;
   background-color: rgba(255, 255, 255, 0.308);
@@ -212,6 +215,9 @@ aside{
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .info-productos div img{
+    width: 50%;
   }
   .productos-1{
     display: grid;
@@ -261,6 +267,19 @@ aside{
 
 @media screen and (min-width:750px) {
   /*estilos index*/
+  .info-productos div img{
+    width: 70%;
+    height: 400px;
+  }
+  .contenedor{
+    display: grid;
+    grid-template-areas: 
+    "productos-1"
+    "productos-2"
+    "productos-3"
+    "cajas"
+    ;
+   }
   .productos-1{
       grid-template-columns: 1fr 1fr 1fr;
   }
@@ -326,6 +345,10 @@ aside{
   }
   .productos-3 div img{
     width: 45%;
+  }
+  footer div img{
+    height: 50px;
+    width: 50px;
   }
 }
 
