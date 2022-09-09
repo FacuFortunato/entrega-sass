@@ -187,14 +187,6 @@ footer div img{
   height: 50px;
   
 }
-/*none*/
-aside{
-  display: none;
-}
-
-
-
-
 
 
 /*estilos media queries*/
@@ -228,7 +220,7 @@ aside{
     width: 90%;
   }
   .productos-1 div img{
-    height: 45%;
+    height: 40%;
     width: 80%;
   }
   .productos-2{
@@ -241,7 +233,7 @@ aside{
     width: 90%;
   }
   .productos-2 div img{
-    height: 45%;
+    height: 40%;
     width: 80%;
   }
   .productos-3{
@@ -254,7 +246,7 @@ aside{
     width: 90%;
   }
   .productos-3 div img{
-    height: 45%;
+    height: 40%;
     width: 80%;
   }
 
@@ -273,6 +265,17 @@ aside{
 
 }
 
+@media screen and (min-width:500px) {
+  .productos-1 div img{
+    height: 45%;
+  }
+  .productos-2 div img{
+    height: 45%;
+  }
+  .productos-3 div img{
+    height: 45%;
+  }
+}
 
 @media screen and (min-width:750px) {
   /*estilos index*/
@@ -352,14 +355,23 @@ aside{
 }
 
 @media screen and (min-width:1024px) {
+  .productos-1 div{
+    width: 70%;
+  }
   .productos-1 div img{
-    width: 45%;
+    width: 60%;
+  }
+  .productos-2 div{
+    width: 70%;
   }
   .productos-2 div img{
-    width: 45%;
+    width: 60%;
+  }
+  .productos-3 div{
+    width: 70%;
   }
   .productos-3 div img{
-    width: 45%;
+    width: 60%;
   }
 }
 
