@@ -20,7 +20,6 @@ h2, h3, h4, h5, li, p{
 /*footer*/
 footer{
   margin-top: 10px;
-  padding-left: 25px;
   width: 100%;
   height: auto;
   text-align: center;
@@ -225,10 +224,12 @@ aside{
     grid-template-columns: 1fr 1fr;
   }
   .productos-1 div{
-    height: 350px;
+    height: 500px;
+    width: 90%;
   }
   .productos-1 div img{
     height: 45%;
+    width: 80%;
   }
   .productos-2{
       display: grid;
@@ -236,10 +237,12 @@ aside{
       grid-template-columns: 1fr 1fr;
   }
   .productos-2 div{
-    height: 350px;
+    height: 500px;
+    width: 90%;
   }
   .productos-2 div img{
     height: 45%;
+    width: 80%;
   }
   .productos-3{
     display: grid;
@@ -247,14 +250,20 @@ aside{
     grid-template-columns: 1fr 1fr;
   }
   .productos-3 div{
-    height: 350px;
+    height: 500px;
+    width: 90%;
   }
   .productos-3 div img{
     height: 45%;
+    width: 80%;
   }
 
   footer ul, div{
       font-size: 20px;
+  }
+  footer div img{
+    height: 50px;
+    width: 50px;
   }
   .cajas{
       display: grid;
@@ -311,28 +320,34 @@ aside{
 
   /*propiedades transform*/
   main div div img{
-      transition: 2s;
+    transition: 2s;
   }   
   main div div img:hover{
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
   main div div button:hover{
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
   nav ul li:hover{
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
   main div div button:hover{
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
   header nav ul li:hover{
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
   .cajas div img{
-      transition: 2s;
+    transition: 2s;
   }
   .cajas div img:hover{
-      transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  footer div img{
+    transition: 2s;
+  }
+  footer div img:hover{
+    transform: scale(1.2);
   }
 }
 
@@ -345,10 +360,6 @@ aside{
   }
   .productos-3 div img{
     width: 45%;
-  }
-  footer div img{
-    height: 50px;
-    width: 50px;
   }
 }
 
