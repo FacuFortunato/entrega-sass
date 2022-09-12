@@ -17,6 +17,48 @@ h2, h3, h4, h5, li, p{
   color: black;
 }
 
+/* propiedades bootstrap*/
+
+  .info-1{
+    margin: 190px 10px;
+  }
+  .info-1 h3{
+    font-weight: bold;
+  }
+  .info-1 div img{
+    height: 400px;
+  }
+  .card-group{
+    margin: 100px 10px;
+  }
+  .info-2{
+    margin: 100px 0;
+  }
+  .info-2 h5{
+    font-size: x-large;
+    font-weight: bold;
+  }
+  .info-2 .cartas{
+    box-shadow: 3px 3px 10px;
+  }
+  .info-3{
+    margin: 100px 0;
+  }
+  .info-3 .cartas-2{
+    margin: 50px 0;
+    background-color: rgba(160, 151, 151, 0.438);
+  }
+  .cartas{
+    margin: 10px;
+  }
+
+
+/*logo*/
+.img-logo{
+  height: 25%;
+  width: 25%;
+}
+
 /*footer*/
 footer{
   margin-top: 10px;
@@ -45,7 +87,7 @@ footer div img{
   background-color: white;
   justify-content: center;
   text-align: center;
-  margin: 55px 0 200px 0;
+  margin: 150px 0 200px 0;
   display: flex;
   flex-flow: column wrap;
   border-bottom: 2px solid black;
@@ -191,7 +233,6 @@ footer div img{
 
 /*estilos media queries*/
 @media screen and (min-width:400px) {
-  
   .contenedor{
     display: grid;
     grid-template-areas: 
@@ -201,7 +242,9 @@ footer div img{
     "cajas cajas"
     ;
    }
-
+   .info-productos{
+    margin-top: 190px;
+   }
    .info-productos div ul{
     list-style-type: none;
     display: grid;
@@ -262,10 +305,12 @@ footer div img{
       grid-area: cajas;
       height: 700px;
       width: auto;
-
+  }
 }
-
 @media screen and (min-width:500px) {
+  .info-productos{
+    margin-top: 150px;
+   }
   .productos-1 div img{
     height: 45%;
   }
@@ -277,11 +322,22 @@ footer div img{
   }
 }
 
+@media screen and (min-width:699px) {
+  .info-productos{
+    margin-top: 110px;
+  }
+}
+
 @media screen and (min-width:750px) {
   /*estilos index*/
   .info-productos div img{
     width: 70%;
     height: 400px;
+  }
+  .carrusel{
+    height: 50%;
+    width: 50%;
+    margin-left: 20%;
   }
   .contenedor{
     display: grid;
@@ -355,6 +411,12 @@ footer div img{
 }
 
 @media screen and (min-width:1024px) {
+  .info-1 div{
+    margin: 100px 50px ;
+  }
+  .info-1 div img{
+    height: 500px;
+  }
   .productos-1 div{
     width: 70%;
   }
@@ -376,51 +438,3 @@ footer div img{
 }
 
 
-/*bootstrap*/
-#carouselExampleCaptions{
-  margin: 100px;
-}
-.info-1{
-  margin: 100px 10px;
-}
-.card-group{
-  margin: 100px 10px;
-}
-.img-footer img{
-  height: 20px;
-  width: 20px;
-}
-
-/* propiedades bootstrap*/
-    .info-1{
-        margin: 100px 0;
-    }
-    .info-2{
-        margin: 100px 0;
-    }
-    .info-2 .cartas{
-        box-shadow: 3px 3px 10px;
-    }
-    .info-3{
-        margin: 100px 0;
-    }
-    .info-3 .cartas-2{
-        margin: 50px 0;
-        background-color: rgba(160, 151, 151, 0.438);
-    }
-    footer ul{
-        list-style-type: none;
-    }
-    footer div .img-footer img{
-        height: 20px;
-        width: 20px;
-    }
-    .cartas{
-        margin: 10px;
-    }
-    .carrusel{
-        height: 50%;
-        width: 50%;
-        margin-left: 20%
-    }
-  }
