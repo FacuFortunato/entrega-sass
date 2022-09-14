@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*estilos index*/
+
 
 /*body*/
 body{
@@ -17,8 +17,37 @@ h2, h3, h4, h5, li, p{
   color: black;
 }
 
-/* propiedades bootstrap*/
 
+/*estilos servicio técnico*/
+.container-servicio{
+  margin-top: 200px;
+  display: flex;
+  flex-flow: column;
+}
+
+.container-servicio div img{
+  height: 80%;
+  width: 80%;
+}
+
+.info-servicio{
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+.info-servicio div{
+  margin: 10px auto 10px auto;
+  background-color: white;
+  box-shadow: 4px 4px 8px;
+}
+
+.formulario{
+  margin-top: 200px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* propiedades bootstrap*/
   .info-1{
     margin: 190px 10px;
   }
@@ -80,7 +109,7 @@ footer div img{
   width: 20px;
 }
 
-
+/*estilos index*/
 /*info productos*/
 .info-productos{
   width: 100%;
@@ -220,14 +249,13 @@ footer div img{
 }
 .cajas div{
   margin: 15px;
-  padding-top: 15px;
+  padding: 15px;
   border: 1px solid black;
 }
 .cajas div img{
   display: inline-block;
   width: 50px;
   height: 50px;
-  
 }
 
 
@@ -301,11 +329,17 @@ footer div img{
     width: 50px;
   }
   .cajas{
-      display: grid;
-      grid-area: cajas;
-      height: 700px;
-      width: auto;
+    display: grid;
+    grid-area: cajas;
+    height: 900px;
+    width: 70%;
   }
+
+  /*propiedades servicio*/
+  .info-servicio{
+    margin: auto 15px;
+  }
+
 }
 @media screen and (min-width:500px) {
   .info-productos{
@@ -319,6 +353,11 @@ footer div img{
   }
   .productos-3 div img{
     height: 45%;
+  }
+
+  /*propiedades servicio*/
+  .info-servicio{
+
   }
 }
 
@@ -361,9 +400,10 @@ footer div img{
   /*cajas*/
   .cajas{
     grid-template-columns: 1fr 1fr 1fr;
-    height: 350px;
-    width: 600px;
+    height: 400px;
+    width: 700px;
   }
+
   /*aside*/
   aside img{
       height: 200px;
@@ -375,7 +415,14 @@ footer div img{
       font-size: 20px;
   }
 
-
+  /*propiedades servicio*/
+  .info-servicio{
+    height: 250px;
+    margin: auto 20px;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    column-gap: 10px;
+  }
 
   /*propiedades transform*/
   main div div img{
@@ -395,12 +442,6 @@ footer div img{
   }
   header nav ul li:hover{
     transform: scale(0.9);
-  }
-  .cajas div img{
-    transition: 2s;
-  }
-  .cajas div img:hover{
-    transform: scale(1.2);
   }
   footer div img{
     transition: 2s;
