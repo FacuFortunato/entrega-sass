@@ -24,27 +24,50 @@ h2, h3, h4, h5, li, p{
   display: flex;
   flex-flow: column;
 }
+.container-servicio div{
+  justify-content: center;
+  align-items: center;
+}
 
 .container-servicio div img{
   height: 80%;
   width: 80%;
 }
+.container-servicio div h4{
+  margin: 15px auto;
+  font-weight: bold;
+}
 
 .info-servicio{
+  margin: 200px auto;
   display: flex;
   flex-flow: column wrap;
   text-align: center;
 }
 .info-servicio div{
-  margin: 10px auto 10px auto;
+  padding: 5px;
+  margin: 10px;
   background-color: white;
   box-shadow: 4px 4px 8px;
 }
+.info-servicio div h3{
+  font-weight: bold;
+}
+
 
 .formulario{
-  margin-top: 200px;
+  margin: 200px auto;
+  background-color: white;
+  border: 2px solid black;
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario h5{
+  font-size: x-large;
+  font-weight: bold;
 }
 
 /* propiedades bootstrap*/
@@ -335,10 +358,6 @@ footer div img{
     width: 70%;
   }
 
-  /*propiedades servicio*/
-  .info-servicio{
-    margin: auto 15px;
-  }
 
 }
 @media screen and (min-width:500px) {
@@ -364,6 +383,10 @@ footer div img{
 @media screen and (min-width:699px) {
   .info-productos{
     margin-top: 110px;
+  }
+
+  .formulario{
+    width: 80%;
   }
 }
 
@@ -417,8 +440,7 @@ footer div img{
 
   /*propiedades servicio*/
   .info-servicio{
-    height: 250px;
-    margin: auto 20px;
+    margin: 200px 20px;
     display: grid;
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
     column-gap: 10px;
@@ -474,6 +496,11 @@ footer div img{
     width: 70%;
   }
   .productos-3 div img{
+    width: 60%;
+  }
+
+  /*estilos servicio*/
+  .formulario{
     width: 60%;
   }
 }
