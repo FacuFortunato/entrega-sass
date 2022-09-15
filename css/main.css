@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 /*body*/
 body{
   font-family: 'Roboto', sans-serif;
@@ -19,21 +18,20 @@ h2, h3, h4, h5, li, p{
 
 
 /*estilos servicio técnico*/
-.container-servicio{
-  margin-top: 200px;
+.container-prueba{
   display: flex;
-  flex-flow: column;
-}
-.container-servicio div{
+  margin-top: 200px;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-.container-servicio div img{
-  height: 80%;
-  width: 80%;
+.container-prueba img{
+  height: 100%;
+  width: 100%;
 }
-.container-servicio div h4{
+.container-prueba h4{
   margin: 15px auto;
   font-weight: bold;
 }
@@ -54,11 +52,10 @@ h2, h3, h4, h5, li, p{
   font-weight: bold;
 }
 
-
 .formulario{
   margin: 200px auto;
   background-color: white;
-  border: 2px solid black;
+  border: 1px solid black;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -357,7 +354,13 @@ footer div img{
     height: 900px;
     width: 70%;
   }
-
+  /*propiedades servicio*/
+  .container-prueba{
+    display: grid;
+    grid-row: 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+  }
 
 }
 @media screen and (min-width:500px) {
@@ -373,10 +376,8 @@ footer div img{
   .productos-3 div img{
     height: 45%;
   }
-
-  /*propiedades servicio*/
-  .info-servicio{
-
+  .cajas{
+    width: 50%;
   }
 }
 
@@ -429,13 +430,13 @@ footer div img{
 
   /*aside*/
   aside img{
-      height: 200px;
-      width: 700px;
+    height: 200px;
+    width: 700px;
   } 
   /*footer*/
   footer{
-      width: 100%;
-      font-size: 20px;
+    width: 100%;
+    font-size: 20px;
   }
 
   /*propiedades servicio*/
@@ -444,6 +445,12 @@ footer div img{
     display: grid;
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
     column-gap: 10px;
+  }
+  .container-prueba .pruebita-2{
+
+  }
+  .container-prueba .pruebita{
+    margin-top: 1000px;
   }
 
   /*propiedades transform*/
@@ -501,7 +508,7 @@ footer div img{
 
   /*estilos servicio*/
   .formulario{
-    width: 60%;
+    width: 40%;
   }
 }
 
