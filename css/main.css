@@ -144,9 +144,11 @@ footer div img{
 .info-productos div h5{
   font-weight: bold;
 }
-.info-productos div img{
-  width: 250px;
+.info-productos div{
+  height: 100%;
+  width: 100%;
 }
+
 .info-productos div ul li{
   list-style-type: none;
 
