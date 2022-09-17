@@ -1,21 +1,66 @@
+/*propiedades comunes a todos los html*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /*body*/
 body{
   font-family: 'Roboto', sans-serif;
   text-align: center;
   background-color: rgb(204, 209, 209);
 }
-
 /* color fuente*/
 h2, h3, h4, h5, li, p{
   color: black;
 }
+/*logo*/
+.img-logo{
+  height: 23%;
+  width: 23%;
+}
+/*footer*/
+footer{
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #002B5B; 
+  font-size: 20px;
+}
+footer div{
+  margin: 20px 0px;
+}
+footer ul{
+  list-style-type: none;
+}
+footer div img{
+  margin-bottom: 0;
+  height: 20px;
+  width: 20px;
+}
+/*cajas*/
+.cajas{
+  margin: 50px auto 200px auto;
+  height: 700px;
+  width: auto;
+  grid-template-columns: 1fr;
+}
+.cajas div{
+  background-color: rgba(255, 255, 255, 0.308);
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid black;
+}
+.cajas div img{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
 
+
+
+/*estilos propios de cada html*/
 
 /*estilos servicio técnico*/
 .container-prueba{
@@ -102,51 +147,62 @@ h2, h3, h4, h5, li, p{
   }
 
 
-/*logo*/
-.img-logo{
-  height: 25%;
-  width: 25%;
+/*estilos contacto*/
+.container-contacto{
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  background-color: rgba(255, 255, 255, 0.308);
 }
+.location{
+  margin: 200px auto 100px auto;
+}
+.location iframe{
+  height: 400px;
+  width: 90%;
+}
+.info-contacto{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 
-/*footer*/
-footer{
-  margin-top: 10px;
+}
+.info-contacto div{
   width: 100%;
-  height: auto;
-  text-align: center;
-  background-color: #002B5B; 
-  font-size: 15px;
 }
-footer div{
-  margin: 20px 0px;
+.info-contacto div h4{
+  font-weight: bold;
 }
-footer ul{
+.info-contacto img{
+  height: 10%;
+  width: 10%;
+}
+.contacto-direcciones ul{
   list-style-type: none;
 }
-footer div img{
-  margin-bottom: 0;
-  height: 20px;
-  width: 20px;
+.form-contacto form{
+
 }
 
-/*estilos index*/
+/*estilos productos*/
 /*info productos*/
 .info-productos{
   width: 100%;
+  height: 900px;
   background-color: white;
-  justify-content: center;
-  text-align: center;
-  margin: 150px 0 200px 0;
-  display: flex;
-  flex-flow: column wrap;
-  border-bottom: 2px solid black;
+  margin: 150px auto 200px auto;
+
+  background-image: url(../img/local/andy-hermawan-uFdCDgnoNVI-unsplash.jpg);
+  background-size: cover;
 }
 .info-productos div h5{
   font-weight: bold;
 }
 .info-productos div{
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+
 }
 
 .info-productos div ul li{
@@ -259,27 +315,6 @@ footer div img{
 }
 
 
-/*cajas*/
-.cajas{
-  margin: 50px auto 200px auto;
-  height: 700px;
-  width: auto;
-  grid-template-columns: 1fr;
-  background-color: rgba(255, 255, 255, 0.308);
-  border: 1px solid black;
-  
-}
-.cajas div{
-  margin: 15px;
-  padding: 15px;
-  border: 1px solid black;
-}
-.cajas div img{
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-}
-
 
 /*estilos media queries*/
 @media screen and (min-width:400px) {
@@ -381,6 +416,32 @@ footer div img{
   .cajas{
     width: 50%;
   }
+
+  /*propiedades contacto*/
+  .info-contacto{
+    display: grid;
+    grid-template-areas: 
+    "direcciones mail"
+    "wsp horarios"
+    "redes redes"
+    ;
+  }
+  .contacto-direcciones{
+    grid-area: direcciones;
+  }
+  .contacto-mail{
+    grid-area: mail;
+  }
+  .contacto-wsp{
+    grid-area: wsp;
+  }
+  .contacto-horarios{
+    grid-area: horarios;
+  }
+  .contacto-redes{
+    grid-area: redes;
+  }
+
 }
 
 @media screen and (min-width:699px) {
@@ -425,11 +486,28 @@ footer div img{
 
   /*cajas*/
   .cajas{
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-areas: 
+    "caja-1 caja-2"
+    "caja-3 caja-3"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     height: 400px;
     width: 700px;
   }
-
+  .cajas div{
+    margin: 5px;
+  }
+  .caja-1{
+    grid-area: caja-1;
+  }
+  .caja-2{
+    grid-area: caja-2;
+  }
+  .caja-3{
+    grid-area: caja-3;
+  }
   /*aside*/
   aside img{
     height: 200px;
@@ -448,11 +526,14 @@ footer div img{
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
     column-gap: 10px;
   }
-  .container-prueba .pruebita-2{
-
-  }
   .container-prueba .pruebita{
     margin-top: 1000px;
+  }
+  
+  /*propiedades contacto*/
+  .location iframe{
+    height: 500px;
+    width: 70%;
   }
 
   /*propiedades transform*/
