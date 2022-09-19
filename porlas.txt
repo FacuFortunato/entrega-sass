@@ -1,24 +1,69 @@
+/*estilos comunes a todos los html*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /*body*/
 body{
   font-family: 'Roboto', sans-serif;
   text-align: center;
   background-color: rgb(204, 209, 209);
 }
-
 /* color fuente*/
 h2, h3, h4, h5, li, p{
   color: black;
 }
+/*logo*/
+.img-logo{
+  height: 23%;
+  width: 23%;
+}
+/*footer*/
+footer{
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #002B5B; 
+  font-size: 20px;
+}
+footer div{
+  margin: 20px 0px;
+}
+footer ul{
+  list-style-type: none;
+}
+footer div img{
+  margin-bottom: 0;
+  height: 20px;
+  width: 20px;
+}
+/*cajas*/
+.cajas{
+  margin: 50px auto 200px auto;
+  height: 700px;
+  width: auto;
+  grid-template-columns: 1fr;
+}
+.cajas div{
+  background-color: rgba(255, 255, 255, 0.308);
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid black;
+}
+.cajas div img{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
 
+
+
+/*estilos propios de cada html*/
 
 /*estilos servicio técnico*/
-.container-prueba{
+.container-servicio{
   display: flex;
   margin-top: 200px;
   flex-flow: column wrap;
@@ -26,16 +71,14 @@ h2, h3, h4, h5, li, p{
   align-items: center;
   text-align: center;
 }
-
-.container-prueba img{
+.container-servicio img{
   height: 100%;
   width: 100%;
 }
-.container-prueba h4{
+.container-servicio h4{
   margin: 15px auto;
   font-weight: bold;
 }
-
 .info-servicio{
   margin: 200px auto;
   display: flex;
@@ -51,7 +94,6 @@ h2, h3, h4, h5, li, p{
 .info-servicio div h3{
   font-weight: bold;
 }
-
 .formulario{
   margin: 200px auto;
   background-color: white;
@@ -61,15 +103,17 @@ h2, h3, h4, h5, li, p{
   justify-content: center;
   align-items: center;
 }
-
 .formulario h5{
   font-size: x-large;
   font-weight: bold;
 }
 
-/* propiedades bootstrap*/
+/* estilos index*/
   .info-1{
     margin: 190px 10px;
+  }
+  .info-1 p{
+    color: #002B5B;
   }
   .info-1 h3{
     font-weight: bold;
@@ -102,50 +146,55 @@ h2, h3, h4, h5, li, p{
   }
 
 
-/*logo*/
-.img-logo{
-  height: 25%;
-  width: 25%;
+/*estilos contacto*/
+.container-contacto{
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  background-color: rgba(255, 255, 255, 0.308);
 }
-
-/*footer*/
-footer{
-  margin-top: 10px;
+.location{
+  margin: 200px auto 100px auto;
+}
+.location iframe{
+  height: 400px;
+  width: 90%;
+}
+.info-contacto{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.form-contacto textarea{
+  height: 250px;
+  width: 70%;
+}
+.info-contacto div{
   width: 100%;
-  height: auto;
-  text-align: center;
-  background-color: #002B5B; 
-  font-size: 15px;
 }
-footer div{
-  margin: 20px 0px;
+.info-contacto div h4{
+  font-weight: bold;
 }
-footer ul{
+.info-contacto img{
+  height: 10%;
+  width: 10%;
+}
+.contacto-direcciones ul{
   list-style-type: none;
 }
-footer div img{
-  margin-bottom: 0;
-  height: 20px;
-  width: 20px;
-}
 
-/*estilos index*/
+
+/*estilos productos*/
 /*info productos*/
 .info-productos{
   width: 100%;
-  background-color: white;
-  justify-content: center;
-  text-align: center;
-  margin: 150px 0 200px 0;
-  display: flex;
-  flex-flow: column wrap;
-  border-bottom: 2px solid black;
+  margin: 200px auto 200px auto;
+  background-image: url(../img/local/andy-hermawan-uFdCDgnoNVI-unsplash.jpg);
+  background-size: cover;
 }
+
 .info-productos div h5{
   font-weight: bold;
-}
-.info-productos div img{
-  width: 250px;
 }
 .info-productos div ul li{
   list-style-type: none;
@@ -243,7 +292,6 @@ footer div img{
   font-weight: bold;
 }
 .productos-3 div button{
-
   width: 100px;
   margin: auto;
   margin-bottom: 10px;
@@ -257,30 +305,10 @@ footer div img{
 }
 
 
-/*cajas*/
-.cajas{
-  margin: 50px auto 200px auto;
-  height: 700px;
-  width: auto;
-  grid-template-columns: 1fr;
-  background-color: rgba(255, 255, 255, 0.308);
-  border: 1px solid black;
-  
-}
-.cajas div{
-  margin: 15px;
-  padding: 15px;
-  border: 1px solid black;
-}
-.cajas div img{
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-}
 
 
-/*estilos media queries*/
 @media screen and (min-width:400px) {
+  /*estilos index*/
   .contenedor{
     display: grid;
     grid-template-areas: 
@@ -291,7 +319,7 @@ footer div img{
     ;
    }
    .info-productos{
-    margin-top: 190px;
+    height: 500px;
    }
    .info-productos div ul{
     list-style-type: none;
@@ -354,19 +382,17 @@ footer div img{
     height: 900px;
     width: 70%;
   }
-  /*propiedades servicio*/
-  .container-prueba{
+  /*estilos servicio*/
+  .container-servicio{
     display: grid;
     grid-row: 1fr;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
   }
-
 }
+
 @media screen and (min-width:500px) {
-  .info-productos{
-    margin-top: 150px;
-   }
+  /*estilos index*/
   .productos-1 div img{
     height: 45%;
   }
@@ -379,81 +405,81 @@ footer div img{
   .cajas{
     width: 50%;
   }
+
+  /*propiedades contacto*/
+  .info-contacto{
+    display: grid;
+    grid-template-areas: 
+    "direcciones horarios"
+    "wsp mail"
+    "redes redes"
+    ;
+  }
+  .contacto-direcciones{
+    grid-area: direcciones;
+  }
+  .contacto-mail{
+    grid-area: mail;
+  }
+  .contacto-wsp{
+    grid-area: wsp;
+  }
+  .contacto-horarios{
+    grid-area: horarios;
+  }
+  .contacto-redes{
+    grid-area: redes;
+  }
+  .form-contacto textarea{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:600px){
+  .info-servicio div{
+    width: 400px;
+    margin: auto auto 10px auto;
+  }
 }
 
 @media screen and (min-width:699px) {
-  .info-productos{
-    margin-top: 110px;
-  }
-
   .formulario{
     width: 80%;
   }
 }
 
 @media screen and (min-width:750px) {
-  /*estilos index*/
-  .info-productos div img{
-    width: 70%;
-    height: 400px;
-  }
-  .carrusel{
-    height: 50%;
-    width: 50%;
-    margin-left: 20%;
-  }
-  .contenedor{
-    display: grid;
-    grid-template-areas: 
-    "productos-1"
-    "productos-2"
-    "productos-3"
-    "cajas"
-    ;
-   }
-  .productos-1{
-      grid-template-columns: 1fr 1fr 1fr;
-  }
-  .productos-2{
-      grid-template-columns: 1fr 1fr 1fr;
-  }
-  .productos-3{
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  /*cajas*/
-  .cajas{
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 400px;
-    width: 700px;
-  }
-
-  /*aside*/
-  aside img{
-    height: 200px;
-    width: 700px;
-  } 
   /*footer*/
   footer{
     width: 100%;
     font-size: 20px;
   }
-
-  /*propiedades servicio*/
-  .info-servicio{
-    margin: 200px 20px;
+  /*cajas*/
+  .cajas{
     display: grid;
-    grid-template-columns: 0.8fr 0.8fr 0.8fr;
-    column-gap: 10px;
+    grid-template-areas: 
+    "caja-1 caja-2"
+    "caja-3 caja-3"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 400px;
+    width: 700px;
   }
-  .container-prueba .pruebita-2{
-
+  .cajas div{
+    margin: 5px;
   }
-  .container-prueba .pruebita{
-    margin-top: 1000px;
+  .caja-1{
+    grid-area: caja-1;
   }
-
-  /*propiedades transform*/
+  .caja-2{
+    grid-area: caja-2;
+  }
+  .caja-3{
+    grid-area: caja-3;
+  }
+  
+  /*estilos transform*/
   main div div img{
     transition: 2s;
   }   
@@ -478,15 +504,82 @@ footer div img{
   footer div img:hover{
     transform: scale(1.2);
   }
+
+  /*estilos index*/
+  .carrusel{
+    height: 50%;
+    width: 50%;
+    margin-left: 20%;
+  }
+  /*estilos productos*/
+  .info-productos{
+    margin-top: 50px ;
+    height: 800px;
+   }
+  .info-productos div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%);
+  }
+  .info-productos div p{
+    font-weight: bold;
+    color: #002B5B;
+  }
+  .info-productos div ul li{
+    color: #002B5B;
+  }
+  .contenedor{
+    display: grid;
+    grid-template-areas: 
+    "productos-1"
+    "productos-2"
+    "productos-3"
+    "cajas"
+    ;
+   }
+  .productos-1{
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  .productos-2{
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  .productos-3{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /*estilos servicio*/
+  .info-servicio{
+    margin: 200px 20px;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    column-gap: 10px;
+  }
+  .info-servicio div{
+    padding: 5px;
+    margin: 10px;
+    width: 100%;
+  }
+ 
+  /*estilos contacto*/
+  .location iframe{
+    height: 500px;
+    width: 70%;
+  }
+  .container-contacto{
+    width: 700px;
+    margin: 200px auto;
+  }
 }
 
 @media screen and (min-width:1024px) {
+  /*estilos index*/
   .info-1 div{
     margin: 100px 50px ;
   }
   .info-1 div img{
     height: 500px;
   }
+  /*estilos productos*/
   .productos-1 div{
     width: 70%;
   }
@@ -505,9 +598,10 @@ footer div img{
   .productos-3 div img{
     width: 60%;
   }
-
   /*estilos servicio*/
   .formulario{
     width: 40%;
   }
 }
+
+
