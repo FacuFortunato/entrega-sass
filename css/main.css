@@ -75,6 +75,9 @@ footer div img{
   height: 100%;
   width: 100%;
 }
+.container-servicio p{
+  color: #002B5B;
+}
 .container-servicio h4{
   margin: 15px auto;
   font-weight: bold;
@@ -89,7 +92,7 @@ footer div img{
   padding: 5px;
   margin: 10px;
   background-color: white;
-  box-shadow: 4px 4px 8px;
+  box-shadow: 4px 4px 10px;
 }
 .info-servicio div h3{
   font-weight: bold;
@@ -107,6 +110,7 @@ footer div img{
   font-size: x-large;
   font-weight: bold;
 }
+
 
 /* estilos index*/
   .info-1{
@@ -153,12 +157,20 @@ footer div img{
   margin-top: 200px;
   background-color: rgba(255, 255, 255, 0.308);
 }
+.container-contacto h3{
+  font-weight: bolder;
+  font-size: xx-large;
+}
 .location{
   margin: 200px auto 100px auto;
 }
 .location iframe{
   height: 400px;
   width: 90%;
+}
+.location h5{
+  font-weight: bolder;
+  font-size: xx-large;
 }
 .info-contacto{
   display: flex;
@@ -185,14 +197,12 @@ footer div img{
 
 
 /*estilos productos*/
-/*info productos*/
 .info-productos{
   width: 100%;
   margin: 200px auto 200px auto;
-  background-image: url(../img/local/andy-hermawan-uFdCDgnoNVI-unsplash.jpg);
+  background-image: url(../img/local/bg-productos.jpg);
   background-size: cover;
 }
-
 .info-productos div h5{
   font-weight: bold;
 }
@@ -203,8 +213,6 @@ footer div img{
 .info-productos div span{
   font-weight: bold;
 }
-
-/*contenedor*/
 .contenedor{
   justify-content: center;
   align-content: center;
@@ -246,7 +254,6 @@ footer div img{
   margin: auto;
   position: relative;   
 }
-
 .productos-2{
   margin: 100px 0;
   padding: 10px; 
@@ -304,8 +311,62 @@ footer div img{
   position: relative;   
 }
 
-
-
+/*estilos historia*/
+.introduccion{
+  height: 500px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+}
+.introduccion div h5{
+  font-weight: bold;
+  color: #004173;
+}
+.introduccion img{
+  display: block;
+  height: 50%;
+  width: 100%;
+}
+.info-decadas{
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.info-decadas div{
+  margin-top: 10px;
+  background-color: #004173;
+}
+.info-decadas h4{
+  background-color: #0979b0;
+}
+.info-decadas p{
+  color: rgba(255, 255, 255, 0.664);
+}
+.info-decadas img{
+  height: 50%;
+  width: 50%;
+}
+.card-historia{
+  margin: 200px auto;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+.card-historia div{
+  padding: 5px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 4px 4px 10px;
+}
+.card-historia button{
+  background-color: #002B5B;
+  color: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+.card-historia div h6{
+  font-weight: bold;
+}
 
 @media screen and (min-width:400px) {
   /*estilos index*/
