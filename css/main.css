@@ -16,8 +16,8 @@ h2, h3, h4, h5, li, p{
 }
 /*logo*/
 .img-logo{
-  height: 23%;
-  width: 23%;
+  height: 20%;
+  width: 20%;
 }
 /*footer*/
 footer{
@@ -318,7 +318,7 @@ footer div img{
   display: flex;
   flex-direction: row;
 }
-.introduccion div h5{
+.introduccion div h3{
   font-weight: bold;
   color: #004173;
 }
@@ -367,9 +367,13 @@ footer div img{
 .card-historia div h6{
   font-weight: bold;
 }
+.e-sports iframe{
+  width: 80%;
+  height: 350px;
+}
 
 @media screen and (min-width:400px) {
-  /*estilos index*/
+  /*estilos productos*/
   .contenedor{
     display: grid;
     grid-template-areas: 
@@ -450,10 +454,33 @@ footer div img{
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
   }
+  /*estilos historia*/
+  .info-decadas p{
+    padding: 20px;
+  }
+  .e-sports iframe{
+    width: 80%;
+    height: 450px;
+  }
+  .introduccion{
+    justify-content: center;
+    align-items: center;
+  }
+  .introduccion div{
+    width: 80%;
+  }
+  .introduccion div img{
+    width: 60%;
+  }
 }
 
 @media screen and (min-width:500px) {
-  /*estilos index*/
+  /*estilos generales*/
+  .cajas{
+    width: 50%;
+  }
+
+  /*estilos productos*/
   .productos-1 div img{
     height: 45%;
   }
@@ -463,9 +490,7 @@ footer div img{
   .productos-3 div img{
     height: 45%;
   }
-  .cajas{
-    width: 50%;
-  }
+
 
   /*propiedades contacto*/
   .info-contacto{
@@ -497,9 +522,18 @@ footer div img{
 }
 
 @media screen and (min-width:600px){
+  /*estilos servicio*/
   .info-servicio div{
     width: 400px;
     margin: auto auto 10px auto;
+  }
+  /*estilos historia*/
+  .card-historia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .introduccion div img{
+    width: 50%;
   }
 }
 
@@ -629,6 +663,15 @@ footer div img{
   .container-contacto{
     width: 700px;
     margin: 200px auto;
+  }
+
+  /*estilos historia*/
+  .e-sports iframe{
+    width: 70%;
+    height: 500px;
+  }
+  .card-historia{
+    width: 80%;
   }
 }
 
