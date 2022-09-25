@@ -1,45 +1,52 @@
+@import "utilities/variables";
+
+/*Estilos para todos los html*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@import "utilities/variables";
-
-
-/*estilos index*/
-/*body*/
 body{
     font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: rgb(204, 209, 209);
+    h2{
+        color: $color-font-predet;
+    }
+    h3{
+        color: $color-font-predet;
+    }
+    h4{
+        color: $color-font-predet;
+    }
+    h5{
+        color: $color-font-predet;
+    }
+    li{
+        color: $color-font-predet;
+    }
+    p{
+        color: $color-font-predet;
+    }
 }
-/*header*/
+
 header{
-    margin: 10px;
-    padding: 20px;
-    background-color: #002B5B;
-    text-align: center;
+    .img-logo{
+        height: 20%;
+        width: 20%;
+    }
 }
 
-
-/*footer*/
 footer{
-    margin:0 10px 0 10px;
-    padding-left: 25px;
-    width: auto;
+    margin-top: 10px;
+    width: 100%;
     height: auto;
     text-align: center;
-    background-color: #002B5B; 
-    font-size: 15px;
-    h3{
-        color: $color-font-2;
-    }
+    background-color: $color-1; 
+    font-size: 20px;
     div{
         margin: 20px 0px;
-        h2{
-            color: $color-font-2;
-        }
         img{
             margin-bottom: 0;
             height: 20px;
@@ -48,187 +55,647 @@ footer{
     }
     ul{
         list-style-type: none;
-        li{
-            color: $color-font-2;
-        }
-        h2{
-            color: $color-font-2;
+    }
+}
+
+.cajas{
+    margin: 50px auto 200px auto;
+    height: 700px;
+    width: auto;
+    grid-template-columns: 1fr;
+    div{
+        background-color: rgba(255, 255, 255, 0.308);
+        margin: 15px;
+        padding: 15px;
+        border: 1px solid black;
+        img{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
         }
     }
 }
 
-/*contenedor*/
-.contenedor{
-    main{
-        h3{
-            margin: 100px auto;
-            color: $color-font;
+/*Estilos propios de cada html*/
+
+/*Estilos index*/
+.info-1{
+    margin: 190px 10px;
+    .row{
+        margin: 100px auto;
+    }
+    p{
+        color: $color-1;
+        font-size: 22px;
+    }
+    h3{
+        font-weight: bold;
+        font-size: 22px;
+    }
+    div{
+        img{
+            height: 400px;
         }
     }
-    /*productos*/
-    .productos-1{
-        margin: 100px 0;
-        padding: 10px;
-        background-color: $color-athari;
+}
+
+.card-group{
+    margin: 100px 10px;
+}
+
+.info-2{
+    margin: 100px 0;
+    h5{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    .cartas{
+        box-shadow: 3px 3px 10px;
+        margin: 10px;
+        h4{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 19px;
+        }
+    }
+}
+
+.info-3{
+    margin: 100px 0;
+    .cartas-2{
+        margin: 50px 0;
+        background-color: rgba(160, 151, 151, 0.438);
+        padding: 5px;
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+/*Estilos contacto*/
+.location{
+    margin: 200px auto 100px auto;
+    div{
+        h5{
+            font-weight: bolder;
+            font-size: xx-large;
+        }
+        iframe{
+            height: 400px;
+            width: 90%;
+        }
+    }
+}
+
+.container-contacto{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    background-color: rgba(255, 255, 255, 0.308);
+    h3{
+        font-weight: bolder;
+        font-size: xx-large;
+    }
+    .info-contacto{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
         div{
-            margin: 1rem;
+            width: 100%;
+            h4{
+                font-weight: bold;
+            }
+        }
+        .contacto-direcciones{
+            ul{
+                list-style-type: none;
+            }
+        }
+        .contacto-redes{
+            ul{
+                img{
+                    height: 10%;
+                    width: 10%;
+                }
+            }
+        }
+    }
+}
+
+.form-contacto{
+    textarea{
+        height: 250px;
+        width: 70%;
+    }
+}
+
+/*Estilos Historia*/
+.introduccion{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    div{
+        h3{
+            font-weight: bold;
+            color: $color-historia-1;
+        }
+        img{
+            display: block;
+            height: 50%;
+            width: 100%;
+        }
+    }
+}
+
+.info-decadas{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    div{
+        margin-top: 10px;
+        background-color: $color-historia-1;
+        h4{
+            background-color: #0979b0;
+        }
+        h5{
+            background-color: #0979b0;
+        }
+        p{
+            color: rgba(255, 255, 255, 0.664);
+        }
+        img{
+            height: 50%;
+            width: 50%;
+        }
+    }
+}
+
+.card-historia{
+    margin: 200px auto;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    div{
+        padding: 5px;
+        margin: 10px;
+        background-color: white;
+        box-shadow: 4px 4px 10px;
+    }
+    h6{
+        font-weight: bold;
+    }
+    button{
+        background-color: #002B5B;
+        color: white;
+        border-radius: 8px;
+        padding: 5px;
+    }
+}
+
+.e-sports{
+    width: 90%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 250px auto;
+    justify-content: center;
+    align-content: center;
+    div{
+        h3{
+            font-weight: bold;
+            color: $color-historia-1;
+        }
+        p{
+            span{
+                font-weight: bold;
+                color: $color-historia-1;
+            }
+        }
+        iframe{
+            width: 90%;
+            height: 250px;
+        }
+    }
+}
+
+/*Estilos Productos*/
+.info-productos{
+    width: 100%;
+    margin: 200px auto 200px auto;
+    background-image: url(../img/local/bg-productos.jpg);
+    background-size: cover;
+    div{
+        h5{
+            font-weight: bold;
+        }
+        ul{
+            li{
+                list-style-type: none;
+            }
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+.contenedor{
+    justify-content: center;
+    align-content: center;
+    .info-ventas{
+        border-bottom: 2px solid black;
+        p{
+            padding: 10px;
+            background-color: #002B5B;
+            color: white;
+            margin-bottom: 0;
+        }
+    }
+    .productos-1{
+        margin: 100px auto;
+        padding: 10px;
+        div{
+            width: 70%;
+            height: 350px;
+            margin: 1rem auto;
             display: flex;
             flex-flow: column wrap;
             box-shadow: 2px 4px 6px;
-            background-color: $color-cards;
             span{
                 margin: auto;
-                color: $color-font;
+                font-weight: bold;
             }
             button{
                 width: 100px;
                 margin: auto;
                 margin-bottom: 10px;
-                background-color: $color-botones;
             }
             img{
                 border: 1px solid black;
                 width: 100px;
                 height: 100px;
                 margin: auto;
-                position: relative; 
+                position: relative;   
             }
         }
     }
     .productos-2{
-        margin: 100px 0;
+        margin: 100px auto;
         padding: 10px;
-        background-color: $color-athari;
         div{
-            margin: 1rem;
+            width: 70%;
+            height: 350px;
+            margin: 1rem auto;
             display: flex;
             flex-flow: column wrap;
             box-shadow: 2px 4px 6px;
-            background-color: $color-cards;
             span{
                 margin: auto;
-                color: $color-font;
+                font-weight: bold;
             }
             button{
                 width: 100px;
                 margin: auto;
                 margin-bottom: 10px;
-                background-color: $color-botones;
             }
             img{
                 border: 1px solid black;
                 width: 100px;
                 height: 100px;
                 margin: auto;
-                position: relative; 
+                position: relative;   
             }
         }
     }
-    /*banner*/
-    aside{
-        display: none;
-    } 
-    /*cajas*/
-    .cajas{
-        margin-top: 50px;
-        margin-bottom: 200px;
-        height: 600px;
-        width: 250px;
-        grid-template-columns: 1fr;
-        background-color: rgba(255, 255, 255, 0.308);
-        border: 1px solid black;
+    .productos-3{
+        margin: 100px auto;
+        padding: 10px;
         div{
-            margin: 15px;
-            padding-top: 15px;
-            border: 1px solid black;
-            align-content: center;
-            justify-content: center;
-            h4{
-                color: $color-font;
+            width: 70%;
+            height: 350px;
+            margin: 1rem auto;
+            display: flex;
+            flex-flow: column wrap;
+            box-shadow: 2px 4px 6px;
+            span{
+                margin: auto;
+                font-weight: bold;
+            }
+            button{
+                width: 100px;
+                margin: auto;
+                margin-bottom: 10px;
             }
             img{
-                display: inline-block;
-                width: 50px;
-                height: 50px;
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                position: relative;   
             }
         }
     }
 }
 
+/*Estilos Servicio técnico*/
+.container-servicio{
+    display: flex;
+    margin-top: 200px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    div{
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        p{
+            color: $color-1;
+        }
+        h4{
+            margin: 15px auto;
+            font-weight: bold;
+        }
+    }
+}
 
-/*estilos media queries*/
+.info-servicio{
+    margin: 200px auto;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    div{
+        padding: 5px;
+        margin: 10px;
+        background-color: white;
+        box-shadow: 4px 4px 10px;
+        h3{
+            font-weight: bold;
+        }
+    }
+}
+
+.formulario{
+    margin: 200px auto;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    h4{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+/*Media querie 400px*/
 @media screen and (min-width:400px) {
+    /*Estilos generales*/
+    .cajas{
+        display: grid;
+        grid-area: cajas;
+        height: 900px;
+        width: 70%;
+    }
+
     footer{
-        ul, div{
+        div{
+            font-size: 20px;
+            img{
+                height: 50px;
+                width: 50px;
+            }
+        }
+        ul{
             font-size: 20px;
         }
     }
+
+    /*Estilos Historia*/
+    .introduccion{
+        justify-content: center;
+        align-items: center;
+        div{
+            width: 80%;
+            img{
+                margin: auto;
+                width: 100%;
+            }
+        }
+    }
+
+    .info-decadas{
+        p{
+            padding: 20px;
+        }
+    }
     
+    .e-sports{
+        div{
+            iframe{
+                width: 80%;
+                height: 450px;
+            }
+        }
+    }
+
+    /*Estilos Productos*/
+    
+   .info-productos{
+        height: 500px;
+        div{
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                list-style-type: none;
+            }
+            img{
+                width: 50%;
+            }
+        }
+    }
     .contenedor{
         display: grid;
         grid-template-areas: 
         "productos-1 productos-1"
-        "banner banner"
         "productos-2 productos-2"
+        "productos-3 productos-3"
         "cajas cajas"
         ;
         .productos-1{
             display: grid;
             grid-area: productos-1;
             grid-template-columns: 1fr 1fr;
+            div{
+                height: 500px;
+                width: 90%;
+                img{
+                    height: 40%;
+                    width: 80%;
+                }
+            }
         }
         .productos-2{
             display: grid;
-            grid-area: productos-2;
+            grid-area: productos-1;
             grid-template-columns: 1fr 1fr;
-        }
-            /*aside*/
-        aside{
-            display: grid;
-            grid-area: banner;
-            width: 100%;
-            img{
-                height: 200px;
-                width: 500px;
+            div{
+                height: 500px;
+                width: 90%;
+                img{
+                    height: 40%;
+                    width: 80%;
+                }
             }
         }
-        .cajas{
+        .productos-3{
             display: grid;
-            grid-area: cajas;
-            height: 700px;
-            width: auto;
+            grid-area: productos-1;
+            grid-template-columns: 1fr 1fr;
+            div{
+                height: 500px;
+                width: 90%;
+                img{
+                    height: 40%;
+                    width: 80%;
+                }
+            }
         }
-     }
+    }
+
+    /*Estilos Servicio técnico*/
+    .container-servicio{
+        display: grid;
+        grid-row: 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
 }
 
-@media screen and (min-width:750px) {
-    /*header*/
-    header{
-        nav{
-            div{
-                div{
-                    div{
-                        ul{
-                            li:hover{
-                                transform: scale(0.9);
-                            }
-                        }
-                    }
-                }
+/*Media querie 500px*/
+@media screen and (min-width:500px) {
+    /*Estilos generales*/
+    .cajas{
+        width: 50%;
+    }
+
+    /*Estilos Contacto*/
+    .info-contacto{
+        display: grid;
+        grid-template-areas: 
+        "direcciones horarios"
+        "wsp mail"
+        "redes redes"
+        ;
+        .contacto-direcciones{
+            grid-area: direcciones;
+        }
+        .contacto-mail{
+            grid-area: mail;
+        }
+        .contacto-wsp{
+            grid-area: wsp;
+        }
+        .contacto-horarios{
+            grid-area: horarios;
+        }
+        .contacto-redes{
+            grid-area: redes;
+        }
+    }
+
+    .form-contacto{
+        textarea{
+            width: 50%;
+        }
+    }
+
+    /*Estilos Productos*/
+    .productos-1{
+        div{
+            img{
+                height: 45%;
+            }
+        }
+    }
+    .productos-2{
+        div{
+            img{
+                height: 45%;
+            }
+        }
+    }
+    .productos-3{
+        div{
+            img{
+                height: 45%;
             }
         }
     }
 
-    /*footer*/
-    footer{
-        width: 100%;
-        font-size: 20px;
+    /*Estilos Servicio técnico*/
+    .formulario{
+        width: 60%;
+    }
+}
+
+/*Media querie 600px*/
+@media screen and (min-width:600px) {
+    /*Estilos Historia*/
+    .card-historia{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    /*estilos index*/
-    .contenedor{
-        .productos-1{
-            grid-template-columns: 1fr 1fr 1fr;
+    /*Estilos Servicio*/
+    .info-servicio{
+        div{
+            width: 400px;
+            margin: auto auto 10px auto;
+        }
+    }
+}
+
+/*Media querie 750px*/
+@media screen and (min-width:750px) {
+    /*Estilos generales*/
+    footer{
+        font-size: 20px;
+        h4{
+            font-size: 30px;
+        }
+    }
+
+    .cajas{
+        display: grid;
+        grid-template-areas: 
+        "caja-1 caja-2"
+        "caja-3 caja-3"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 400px;
+        width: 700px;
+        div{
+            margin: 5px;
+        }
+        .caja-1{
+            grid-area: caja-1;
+        }
+        .caja-2{
+            grid-area: caja-2;
+        }
+        .caja-3{
+            grid-area: caja-3;
+        }
+    }
+
+    main{
+        div{
             div{
                 img{
                     transition: 2s;
@@ -240,40 +707,195 @@ footer{
                     transform: scale(0.9);
                 }
             }
+        }
+    }
+
+    header{
+        nav{
+            ul{
+                li:hover{
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+
+    footer{
+        div{
+            img{
+                transition: 2s;
+            }
+            img:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    /*Estilos index*/
+    .carrusel{
+        height: 50%;
+        width: 50%;
+        margin-left: 20%;
+    }
+
+    /*Estilos contacto*/
+    .location{
+        iframe{
+            height: 500px;
+            width: 70%;
+        }
+    }
+
+    .container-contacto{
+        width: 700px;
+        margin: 200px auto;
+    }
+
+    /*Estilos historia*/
+    .introduccion{
+        div{
+            p{
+                width: 80%;
+                margin: 25px auto;
+            }
+            img{
+                height: 600px;
+                width: 80%;
+            }
+        }
+    }
+
+    .info-decadas{
+        width: 80%;
+        justify-content: center;
+        align-content: center;
+        margin: 300px auto;
+        div{
+            padding: 3rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            h4{
+                width: 40%;
+                margin: auto auto 100px auto;
+            }
+            h5{
+                width: 40%;
+                margin: auto auto 100px auto;
+            }
+            #octava{
+                margin: 100px auto;
+            }
+            img{
+                width: 20%;
+                width: 20%;
+                margin: auto;
+            }
+        }
+    }
+
+    .card-historia{
+        width: 80%;
+    }
+
+    .e-sports iframe{
+        width: 70%;
+        height: 500px;
+        margin: 20px auto;
+    }
+
+    /*Estilos Productos*/
+    .info-productos{
+        margin-top: 50px ;
+        height: 800px;
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-10%);
+            p{
+                font-weight: bold;
+                color: $color-1;
+            }
+            ul{
+                li{
+                    color: $color-1;
+                }
+            }
+        }
+    }
+
+    .contenedor{
+        display: grid;
+        grid-template-areas: 
+        "productos-1"
+        "productos-2"
+        "productos-3"
+        "cajas"
+        ;
+        .productos-1{
+            grid-template-columns: 1fr 1fr 1fr;
         }
         .productos-2{
             grid-template-columns: 1fr 1fr 1fr;
-            div{
-                img{
-                    transition: 2s;
-                }
-                img:hover{
-                    transform: scale(1.2);
-                }
-                button:hover{
-                    transform: scale(0.9);
-                }
         }
-        /*cajas*/
-        .cajas{
-            grid-template-columns: 1fr 1fr 1fr;
-            height: 350px;
-            width: 600px;
-            div{
-                img{
-                    transition: 2s;
-                }
-                img:hover{
-                    transform: scale(1.2);
-                }
-            }
+        .productos-3{
+          grid-template-columns: 1fr 1fr 1fr;
         }
-        aside{
+    }
+
+    /*Estilos Servicio técnico*/
+    .info-servicio{
+        margin: 200px 20px;
+        display: grid;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+        column-gap: 10px;
+        div{
+            padding: 5px;
+            margin: 10px;
+            width: 100%;
+        }
+    }
+    .formulario{
+        width: 50%;
+    }
+}
+
+/*Media querie 1024px*/
+@media screen and (min-width:1024px) {
+    /*Estilos index*/
+    .info-1{
+        div{
+            margin: 100px 50px;
             img{
-                height: 200px;
-                width: 700px;
+                height: 500px;
             }
         }
     }
- }
+
+    /*Estilos Productos*/
+    .productos-1{
+        div{
+            width: 70%;
+            img{
+                width: 60%;
+            }
+        }
+    }
+    .productos-2{
+        div{
+            width: 70%;
+            img{
+                width: 60%;
+            }
+        }
+    }
+    .productos-3{
+        div{
+            width: 70%;
+            img{
+                width: 60%;
+            }
+        }
+    }
 }
