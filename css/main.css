@@ -106,8 +106,8 @@ footer div img{
   justify-content: center;
   align-items: center;
 }
-.formulario h5{
-  font-size: x-large;
+.formulario h4{
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -148,6 +148,14 @@ footer div img{
   .cartas{
     margin: 10px;
   }
+  .cartas h4{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .cartas-2{
+    padding: 5px;
+  }
+
 
 
 /*estilos contacto*/
@@ -313,11 +321,11 @@ footer div img{
 
 /*estilos historia*/
 .introduccion{
-  height: 500px;
   margin-top: 200px;
   display: flex;
   flex-direction: row;
 }
+
 .introduccion div h3{
   font-weight: bold;
   color: #004173;
@@ -337,6 +345,9 @@ footer div img{
   background-color: #004173;
 }
 .info-decadas h4{
+  background-color: #0979b0;
+}
+.info-decadas h5{
   background-color: #0979b0;
 }
 .info-decadas p{
@@ -367,9 +378,26 @@ footer div img{
 .card-historia div h6{
   font-weight: bold;
 }
-.e-sports iframe{
-  width: 80%;
-  height: 350px;
+.e-sports{
+  width: 90%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 250px auto;
+  justify-content: center;
+  align-content: center;
+}
+.e-sports div h3{
+  font-weight: bold;
+  color: #004173;
+}
+.e-sports div p span{
+  font-weight: bold;
+  color: #004173;
+}
+.e-sports div iframe{
+  width: 90%;
+  height: 250px;
 }
 
 @media screen and (min-width:400px) {
@@ -458,7 +486,7 @@ footer div img{
   .info-decadas p{
     padding: 20px;
   }
-  .e-sports iframe{
+  .e-sports div iframe{
     width: 80%;
     height: 450px;
   }
@@ -470,7 +498,8 @@ footer div img{
     width: 80%;
   }
   .introduccion div img{
-    width: 60%;
+    margin: auto;
+    width: 100%;
   }
 }
 
@@ -532,9 +561,6 @@ footer div img{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .introduccion div img{
-    width: 50%;
-  }
 }
 
 @media screen and (min-width:699px) {
@@ -548,6 +574,9 @@ footer div img{
   footer{
     width: 100%;
     font-size: 20px;
+  }
+  footer h4{
+    font-size: 30px;
   }
   /*cajas*/
   .cajas{
@@ -666,9 +695,32 @@ footer div img{
   }
 
   /*estilos historia*/
+  .introduccion div img{
+    height: 600px;
+    width: 80%;
+  }
+  .info-decadas{
+    width: 90%;
+    justify-content: center;
+    align-content: center;
+    margin: 300px auto;
+  }
+  .info-decadas div{
+    padding: 3rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .info-decadas div img{
+    width: 20%;
+    width: 20%;
+    margin: auto;
+  }
+
   .e-sports iframe{
     width: 70%;
     height: 500px;
+    margin: 20px auto;
   }
   .card-historia{
     width: 80%;
