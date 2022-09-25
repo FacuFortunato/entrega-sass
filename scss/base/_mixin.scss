@@ -1,0 +1,26 @@
+//mixin
+
+@mixin div-productos{
+    width: 70%;
+    height: 350px;
+    margin: 1rem auto;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 2px 4px 6px;
+    span{
+        margin: auto;
+        font-weight: bold;
+    }
+    button{
+        width: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    img{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: relative;   
+    }
+}

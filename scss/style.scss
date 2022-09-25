@@ -1,4 +1,7 @@
 @import "utilities/variables";
+@import "base/mapas";
+@import "base/mixin";
+@import "base/extend";
 
 /*Estilos para todos los html*/
 *{
@@ -59,10 +62,11 @@ footer{
 }
 
 .cajas{
-    margin: 50px auto 200px auto;
-    height: 700px;
-    width: auto;
+    display: grid;
     grid-template-columns: 1fr;
+    height: map-get($map: $cajas, $key: height-cajas);
+    width: map-get($map: $cajas, $key: width-cajas);
+    margin: map-get($map: $cajas, $key: margin-cajas);
     div{
         background-color: rgba(255, 255, 255, 0.308);
         margin: 15px;
@@ -80,7 +84,7 @@ footer{
 
 /*Estilos index*/
 .info-1{
-    margin: 190px 10px;
+    margin: 200px auto;
     .row{
         margin: 100px auto;
     }
@@ -198,6 +202,7 @@ footer{
     flex-direction: row;
     div{
         h3{
+            font-size: 40px;
             font-weight: bold;
             color: $color-historia-1;
         }
@@ -205,6 +210,9 @@ footer{
             display: block;
             height: 50%;
             width: 100%;
+        }
+        p{
+            font-size: 30px;
         }
     }
 }
@@ -217,13 +225,16 @@ footer{
         margin-top: 10px;
         background-color: $color-historia-1;
         h4{
-            background-color: #0979b0;
+            @extend %bg-decada;
+            font-size: 30px;
         }
         h5{
-            background-color: #0979b0;
+            @extend %bg-decada;
+            font-size: 30px;
         }
         p{
             color: rgba(255, 255, 255, 0.664);
+            font-size: 20px;
         }
         img{
             height: 50%;
@@ -242,15 +253,19 @@ footer{
         margin: 10px;
         background-color: white;
         box-shadow: 4px 4px 10px;
-    }
-    h6{
-        font-weight: bold;
-    }
-    button{
-        background-color: #002B5B;
-        color: white;
-        border-radius: 8px;
-        padding: 5px;
+        h4{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 20px;
+        }
+        button{
+            background-color: $color-1;
+            color: white;
+            border-radius: 8px;
+            padding: 5px;
+        }
     }
 }
 
@@ -266,8 +281,10 @@ footer{
         h3{
             font-weight: bold;
             color: $color-historia-1;
+            font-size: 30px;
         }
         p{
+            font-size: 20px;
             span{
                 font-weight: bold;
                 color: $color-historia-1;
@@ -317,84 +334,21 @@ footer{
         margin: 100px auto;
         padding: 10px;
         div{
-            width: 70%;
-            height: 350px;
-            margin: 1rem auto;
-            display: flex;
-            flex-flow: column wrap;
-            box-shadow: 2px 4px 6px;
-            span{
-                margin: auto;
-                font-weight: bold;
-            }
-            button{
-                width: 100px;
-                margin: auto;
-                margin-bottom: 10px;
-            }
-            img{
-                border: 1px solid black;
-                width: 100px;
-                height: 100px;
-                margin: auto;
-                position: relative;   
-            }
+            @include div-productos;
         }
     }
     .productos-2{
         margin: 100px auto;
         padding: 10px;
         div{
-            width: 70%;
-            height: 350px;
-            margin: 1rem auto;
-            display: flex;
-            flex-flow: column wrap;
-            box-shadow: 2px 4px 6px;
-            span{
-                margin: auto;
-                font-weight: bold;
-            }
-            button{
-                width: 100px;
-                margin: auto;
-                margin-bottom: 10px;
-            }
-            img{
-                border: 1px solid black;
-                width: 100px;
-                height: 100px;
-                margin: auto;
-                position: relative;   
-            }
+            @include div-productos;
         }
     }
     .productos-3{
         margin: 100px auto;
         padding: 10px;
         div{
-            width: 70%;
-            height: 350px;
-            margin: 1rem auto;
-            display: flex;
-            flex-flow: column wrap;
-            box-shadow: 2px 4px 6px;
-            span{
-                margin: auto;
-                font-weight: bold;
-            }
-            button{
-                width: 100px;
-                margin: auto;
-                margin-bottom: 10px;
-            }
-            img{
-                border: 1px solid black;
-                width: 100px;
-                height: 100px;
-                margin: auto;
-                position: relative;   
-            }
+            @include div-productos;
         }
     }
 }
@@ -460,6 +414,11 @@ footer{
         grid-area: cajas;
         height: 900px;
         width: 70%;
+        div{
+            p{
+                font-size: 20px;
+            }
+        }
     }
 
     footer{
@@ -508,10 +467,22 @@ footer{
    .info-productos{
         height: 500px;
         div{
+            h5{
+                font-size: 30px;
+            }
+            p{
+                font-size: 20px;
+            }
+            span{
+                font-size: 25px;
+            }
             ul{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 list-style-type: none;
+                li{
+                    font-size: 20px;
+                }
             }
             img{
                 width: 50%;
@@ -533,6 +504,10 @@ footer{
             div{
                 height: 500px;
                 width: 90%;
+                span{
+                    font-weight: bold;
+                    font-size: 20px;
+                }
                 img{
                     height: 40%;
                     width: 80%;
@@ -546,6 +521,10 @@ footer{
             div{
                 height: 500px;
                 width: 90%;
+                span{
+                    font-weight: bold;
+                    font-size: 20px;
+                }
                 img{
                     height: 40%;
                     width: 80%;
@@ -559,6 +538,10 @@ footer{
             div{
                 height: 500px;
                 width: 90%;
+                span{
+                    font-weight: bold;
+                    font-size: 20px;
+                }
                 img{
                     height: 40%;
                     width: 80%;
@@ -573,6 +556,18 @@ footer{
         grid-row: 1fr;
         grid-template-columns: 1fr 1fr;
         column-gap: 10px;
+        h4{
+            font-size: 30px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+
+    .info-servicio{
+        p{
+            font-size: 20px;
+        }
     }
 }
 
@@ -742,7 +737,7 @@ footer{
     .location{
         iframe{
             height: 500px;
-            width: 70%;
+            width: 60%;
         }
     }
 

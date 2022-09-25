@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.info-decadas div h4, .info-decadas div h5 {
+  background-color: #0979b0; }
+
 /*Estilos para todos los html*/
 * {
   margin: 0;
@@ -43,10 +46,11 @@ footer {
     list-style-type: none; }
 
 .cajas {
-  margin: 50px auto 200px auto;
+  display: grid;
+  grid-template-columns: 1fr;
   height: 700px;
   width: auto;
-  grid-template-columns: 1fr; }
+  margin: 50px auto 200px auto; }
   .cajas div {
     background-color: rgba(255, 255, 255, 0.308);
     margin: 15px;
@@ -60,7 +64,7 @@ footer {
 /*Estilos propios de cada html*/
 /*Estilos index*/
 .info-1 {
-  margin: 190px 10px; }
+  margin: 200px auto; }
   .info-1 .row {
     margin: 100px auto; }
   .info-1 p {
@@ -140,12 +144,15 @@ footer {
   display: flex;
   flex-direction: row; }
   .introduccion div h3 {
+    font-size: 40px;
     font-weight: bold;
     color: #004173; }
   .introduccion div img {
     display: block;
     height: 50%;
     width: 100%; }
+  .introduccion div p {
+    font-size: 30px; }
 
 .info-decadas {
   margin-top: 300px;
@@ -155,11 +162,12 @@ footer {
     margin-top: 10px;
     background-color: #004173; }
     .info-decadas div h4 {
-      background-color: #0979b0; }
+      font-size: 30px; }
     .info-decadas div h5 {
-      background-color: #0979b0; }
+      font-size: 30px; }
     .info-decadas div p {
-      color: rgba(255, 255, 255, 0.664); }
+      color: rgba(255, 255, 255, 0.664);
+      font-size: 20px; }
     .info-decadas div img {
       height: 50%;
       width: 50%; }
@@ -174,13 +182,16 @@ footer {
     margin: 10px;
     background-color: white;
     box-shadow: 4px 4px 10px; }
-  .card-historia h6 {
-    font-weight: bold; }
-  .card-historia button {
-    background-color: #002B5B;
-    color: white;
-    border-radius: 8px;
-    padding: 5px; }
+    .card-historia div h4 {
+      font-size: 30px;
+      font-weight: bold; }
+    .card-historia div p {
+      font-size: 20px; }
+    .card-historia div button {
+      background-color: #002B5B;
+      color: white;
+      border-radius: 8px;
+      padding: 5px; }
 
 .e-sports {
   width: 90%;
@@ -192,10 +203,13 @@ footer {
   align-content: center; }
   .e-sports div h3 {
     font-weight: bold;
-    color: #004173; }
-  .e-sports div p span {
-    font-weight: bold;
-    color: #004173; }
+    color: #004173;
+    font-size: 30px; }
+  .e-sports div p {
+    font-size: 20px; }
+    .e-sports div p span {
+      font-weight: bold;
+      color: #004173; }
   .e-sports div iframe {
     width: 90%;
     height: 250px; }
@@ -343,6 +357,8 @@ footer {
     grid-area: cajas;
     height: 900px;
     width: 70%; }
+    .cajas div p {
+      font-size: 20px; }
   footer div {
     font-size: 20px; }
     footer div img {
@@ -367,10 +383,18 @@ footer {
   /*Estilos Productos*/
   .info-productos {
     height: 500px; }
+    .info-productos div h5 {
+      font-size: 30px; }
+    .info-productos div p {
+      font-size: 20px; }
+    .info-productos div span {
+      font-size: 25px; }
     .info-productos div ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       list-style-type: none; }
+      .info-productos div ul li {
+        font-size: 20px; }
     .info-productos div img {
       width: 50%; }
   .contenedor {
@@ -383,6 +407,9 @@ footer {
       .contenedor .productos-1 div {
         height: 500px;
         width: 90%; }
+        .contenedor .productos-1 div span {
+          font-weight: bold;
+          font-size: 20px; }
         .contenedor .productos-1 div img {
           height: 40%;
           width: 80%; }
@@ -393,6 +420,9 @@ footer {
       .contenedor .productos-2 div {
         height: 500px;
         width: 90%; }
+        .contenedor .productos-2 div span {
+          font-weight: bold;
+          font-size: 20px; }
         .contenedor .productos-2 div img {
           height: 40%;
           width: 80%; }
@@ -403,6 +433,9 @@ footer {
       .contenedor .productos-3 div {
         height: 500px;
         width: 90%; }
+        .contenedor .productos-3 div span {
+          font-weight: bold;
+          font-size: 20px; }
         .contenedor .productos-3 div img {
           height: 40%;
           width: 80%; }
@@ -411,7 +444,13 @@ footer {
     display: grid;
     grid-row: 1fr;
     grid-template-columns: 1fr 1fr;
-    column-gap: 10px; } }
+    column-gap: 10px; }
+    .container-servicio h4 {
+      font-size: 30px; }
+    .container-servicio p {
+      font-size: 20px; }
+  .info-servicio p {
+    font-size: 20px; } }
 
 /*Media querie 500px*/
 @media screen and (min-width: 500px) {
@@ -498,7 +537,7 @@ footer {
   /*Estilos contacto*/
   .location iframe {
     height: 500px;
-    width: 70%; }
+    width: 60%; }
   .container-contacto {
     width: 700px;
     margin: 200px auto; }
